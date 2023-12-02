@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Fira+Sans:wght@200;400&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,200&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #001B79;
+    --light-blue: #1640D6;
+    --yellow: #FFC436;
+    --light-yellow: #F4CE14;
+    --text-color: #1a2428;
+    --bg-color: #F2FFE9;
+}
+
+img {
+   width: 100%;
+}
+
+body {
+
+}
