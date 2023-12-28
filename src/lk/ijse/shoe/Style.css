@@ -1,0 +1,309 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+img,
+span,
+table,
+tbody,
+button,
+ion-icon {
+    display: block;
+}
+
+button,
+input {
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: hsl(0, 0%, 100%);
+    font-size: 1.6rem;
+    padding-block-start: 90px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 95%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 70%);
+}
+
+.container {
+    padding-inline: 15px;
+}
+
+.section {
+    padding-block: 60px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+    color: hsl(217, 28%, 9%);
+}
+
+.h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.h2 {
+    font-size: 2.6rem;
+}
+
+.h3 {
+    font-size: 2rem;
+}
+
+.h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    background: var(--background, hsl(5, 100%, 69%));
+    color: var(--color, hsl(0, 0%, 100%));
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 25px;
+    border: 1px solid var(--border-color, hsl(5, 100%, 69%));
+}
+
+.btn-primary:is(:hover, :focus) {
+    --background: hsl(5, 100%, 73%);
+    --border-color: hsl(5, 100%, 73%);
+}
+
+.btn-secondary {
+    --background: transparent;
+    --border-color: hsl(0, 0%, 0%);
+    --color: hsl(0, 0%, 0%);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    --background: hsla(0, 0%, 0%, 0.1);
+}
+
+.has-scrollbar {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar > li {
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    height: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    outline: 2px solid hsl(5, 100%, 69%);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(5, 100%, 69%);
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+    width: calc(25% - 40px);
+}
+
+.card-banner {
+    background: hsl(200, 12%, 95%);
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.5s ease;
+}
+
+.product-card:is(:hover, :focus) .image-contain {
+    transform: scale(1.1);
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: hsl(5, 100%, 69%);
+    color: hsl(0, 0%, 100%);
+    padding: 5px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 25px;
+}
+
+.card-action-list {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+    right: 20px;
+    opacity: 1;
+}
+
+.card-action-item {
+    position: relative;
+}
+
+.card-action-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card-action-btn {
+    background: hsl(0, 0%, 100%);
+    color: hsla(0, 0%, 0%, 0.9);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.25s ease;
+}
+
+.card-action-btn ion-icon {
+    --ionicon-stroke-width: 30px;
+}
+
+.card-action-btn:is(:hover, :focus) {
+    background: hsl(5, 100%, 69%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card-action-tooltip {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 5px);
+    transform: translateY(-50%);
+    width: max-content;
+    background: hsla(0, 0%, 0%, 0.9);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.card-action-btn:is(:hover, :focus) + .card-action-tooltip {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 24px 15px 0;
+    text-align: center;
+}
+
+.card-cat {
+    font-family: 'Roboto', sans-serif;
+    color: hsl(0, 0%, 27%);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card-cat-link {
+    display: inline-block;
+    color: inherit;
+    transition: 0.25s ease;
+}
+
+.card-cat-link:is(:hover, :focus) {
+    color: hsl(5, 100%, 69%);
+}
+
+.product-card .card-title { margin-bottom: 12px; }
+
+.product-card .card-title > a {
+    color: inherit;
+    transition: 0.25s ease;
+}
+
+.product-card .card-title > a:is(:hover, :focus) {
+    color: hsl(5, 100%, 69%);
+}
+
+.card-price {
+    color: hsl(5, 100%, 69%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.card-price del {
+    color: hsl(0, 0%, 74%);
+    margin-left: 8px;
+}
+
+.btn-link {
+    --background: none;
+    --border-color: none;
+    padding: 0;
+    margin-inline: auto;
+    max-width: max-content;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-bottom: 6px;
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+.btn-link:is(:hover, :focus) { border-color: transparent; }
+
